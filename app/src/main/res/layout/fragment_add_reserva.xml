@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.AddReservaFragment">
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icono_appreservas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.080"
+        android:contentDescription="@string/logo" />
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar_reserva"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/TvFechaPaseo"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:hint="@string/yyyy_mm_dd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/BtFechaPaseo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtFechaPaseo"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/fecha_paseo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_calendar"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TvFechaPaseo"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Spinner
+        android:id="@+id/spTurno"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:prompt="@string/turno"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtFechaPaseo"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="HardcodedText" />
+
+    <Spinner
+        android:id="@+id/spCaballos"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:prompt="@string/caballo"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spTurno"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etComentario"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:hint="@string/comentario"
+        android:inputType="text"
+        android:textColorHint="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spCaballos"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <CheckBox
+        android:id="@+id/cbwssp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/whatsapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etComentario"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:hint="@string/telefono"
+        android:inputType="phone"
+        android:textColorHint="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbwssp"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="@string/guardar"
+        android:textStyle="bold"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefono"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="@string/cancelar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="#FF9E9E9E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAgregar"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefono"
+        app:layout_constraintVertical_bias="0.3"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

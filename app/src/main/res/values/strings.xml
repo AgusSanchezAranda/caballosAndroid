@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Hipica Portada Alta</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hipica_portada">Hípica Portada Alta</string>
+    <string name="logo">logo</string>
+    <string name="login">Login</string>
+    <string name="registro">Registro</string>
+    <string name="logo_empresa">Logo</string>
+    <string name="botonagregar">botonAgregar</string>
+    <string name="info_reserva">Información de la reserva</string>
+    <string name="volver">Volver</string>
+    <string name="agregar_reserva">Nueva Reserva</string>
+    <string name="fecha_paseo">Fecha paseo</string>
+    <string name="comentario">Comentario</string>
+    <string name="whatsapp">Confirmación por Whatsapp</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="yyyy_mm_dd">yyyy-mm-dd</string>
+    <string name="editar_reserva">Editar Reserva</string>
+    <string name="turno">Turno</string>
+    <string name="caballo">Caballo</string>
+    <string name="telefono">Teléfono</string>
+</resources>
